@@ -212,6 +212,8 @@ import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 
 const isNoise = ref(true)
 
+toggleDarkmode(true)
+
 const demoCode0 = `# install dependencies
 > pnpm install
 
