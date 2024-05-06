@@ -31,8 +31,8 @@ A simple, fun project for the sake of creating some cool-looking abstract shapes
     - [Props](#props)
       - [notes](#notes)
     - [Categories](#categories)
-  - [Inspriation](#inspriation)
   - [Contributing](#contributing)
+  - [Thanks to](#thanks-to)
   - [License](#license)
 
 </details>
@@ -133,13 +133,13 @@ There are a total of **115** shapes available in Coolshapes under the following 
 
 **Note:** While passing the category name in the component, the name will be in lower case.
 
-## Inspriation
-
-[coolshapes-react](https://github.com/realvjy/coolshapes-react)
-
 ## Contributing
 
 If you want to contribute, create a [pull request](https://github.com/xiaoluoboding/coolshapes-vue/pulls).
+
+## Thanks to
+
+[coolshapes-react](https://github.com/realvjy/coolshapes-react)
 
 ## License
 

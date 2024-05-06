@@ -1,12 +1,11 @@
 <template>
   <div
-    class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900 pb-16"
+    class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900 pb-16 px-8 lg:px-16"
   >
     <div class="container mx-auto max-w-5xl relative">
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
-          <Coolshape :index="4" :size="24" random />
-          Coolshapes Vue
+          <Logo class="w-8 h-8" />
         </div>
         <div class="flex-center gap-4">
           <!-- <button
@@ -30,30 +29,32 @@
           </a>
         </div>
       </nav>
+
       <header class="py-20">
         <div class="font-extrabold flex-center">
           <span class="text-6xl text-neon">Coolshapes Vue</span>
         </div>
         <div
-          class="text-2xl font-semibold flex-center text-slate-700 py-4 dark:text-slate-200"
+          class="text-2xl font-semibold text-center flex-center text-slate-700 py-4 dark:text-slate-200"
         >
           A vue component library for coolshapes with little grainy gradients.
         </div>
-        <div class="flex-center gap-4 mt-8">
-          <a
-            class="bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold py-3 px-6 w-full sm:w-auto text-center"
-            href="https://github.com/xiaoluoboding/vue-library-starter"
+        <div class="flex-center flex-col lg:flex-row gap-4 mt-8">
+          <LinkButton
+            href="https://github.com/xiaoluoboding/coolshapes-vue"
             target="_blank"
           >
+            <Coolshape :size="20" random />
             <span>Documentation</span>
-          </a>
-          <a
-            class="bg-emerald-400 hover:bg-emerald-500 flex items-center justify-center space-x-3 transition rounded-full text-white text-lg font-semibold py-3 px-6 w-full sm:w-auto cursor-pointer"
-            href="https://github.com/new?template_name=vue-library-starter&template_owner=xiaoluoboding"
-            target="_blank"
-          >
+          </LinkButton>
+          <LinkButton href="https://coolshap.es/" target="_blank">
+            <Coolshape :size="20" random />
             <span>Coolshap.es</span>
-          </a>
+          </LinkButton>
+          <LinkButton href="https://demo.coolshap.es/" target="_blank">
+            <Coolshape :size="20" random />
+            <span>Try Demo</span>
+          </LinkButton>
         </div>
       </header>
 

@@ -23,62 +23,24 @@
         ></path>
       </mask>
       <g mask="url(#cs_mask_1_moon-4)">
-        <path fill="#fff" d="M200 0H0v200h200V0z"></path>
+        <path fill="#07FFE1" d="M200 0H0v200h200V0z"></path>
         <path
-          fill="url(#paint0_linear_748_4527)"
+          fill="url(#paint0_linear_748_5008)"
           d="M200 0H0v200h200V0z"
         ></path>
-        <g filter="url(#filter0_f_748_4527)">
-          <ellipse
-            cx="117.708"
-            cy="149.343"
-            fill="#FF58E4"
-            rx="92.722"
-            ry="73.064"
-            transform="rotate(-33.875 117.708 149.343)"
-          ></ellipse>
-          <ellipse
-            cx="68.482"
-            cy="38.587"
-            fill="#00F0FF"
-            rx="69.531"
-            ry="47.75"
-            transform="rotate(-26.262 68.482 38.587)"
-          ></ellipse>
-        </g>
       </g>
     </g>
     <defs>
-      <filter
-        id="filter0_f_748_4527"
-        width="362.189"
-        height="403.182"
-        x="-77.372"
-        y="-94.144"
-        color-interpolation-filters="sRGB"
-        filterUnits="userSpaceOnUse"
-      >
-        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-        <feBlend
-          in="SourceGraphic"
-          in2="BackgroundImageFix"
-          result="shape"
-        ></feBlend>
-        <feGaussianBlur
-          result="effect1_foregroundBlur_748_4527"
-          stdDeviation="40"
-        ></feGaussianBlur>
-      </filter>
       <linearGradient
-        id="paint0_linear_748_4527"
-        x1="158.5"
-        x2="29"
-        y1="12.5"
-        y2="200"
+        id="paint0_linear_748_5008"
+        x1="38"
+        x2="119"
+        y1="14.5"
+        y2="181.5"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#0E6FFF"></stop>
-        <stop offset="1" stop-color="#00F0FF"></stop>
+        <stop stop-color="#FFE500"></stop>
+        <stop offset="1" stop-color="#07FFE1"></stop>
       </linearGradient>
       <clipPath id="cs_clip_1_moon-4">
         <path fill="#fff" d="M0 0H200V200H0z"></path>
