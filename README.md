@@ -1,6 +1,6 @@
 [![Coolshapes](https://coolshap.es/preview.jpg)](https://coolshap.es)
 
-# <p align=center>Coolshapes</p>
+# <p align=center>Coolshapes Vue</p>
 
 [![NPM][npmBadge]][npmUrl]
 [![Minzip Package][bundlePhobiaBadge]][bundlePhobiaUrl]
@@ -21,7 +21,7 @@ A simple, fun project for the sake of creating some cool-looking abstract shapes
 
 <summary>TOC</summary>
 
-- [Coolshapes](#coolshapes)
+- [Coolshapes Vue](#coolshapes-vue)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [How to use](#how-to-use)

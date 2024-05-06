@@ -58,7 +58,7 @@
 </template>
 
 <script lang="ts" setup>
-import ShapeBase from '@/ShapeBase.vue'
+import ShapeBase from '../../ShapeBase.vue'
 
 const shapeId = 'flower-12'
 const maskId = `cs_mask_1_${shapeId}`

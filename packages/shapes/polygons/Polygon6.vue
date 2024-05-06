@@ -74,7 +74,7 @@
 </template>
 
 <script lang="ts" setup>
-import ShapeBase from '@/ShapeBase.vue'
+import ShapeBase from '../../ShapeBase.vue'
 
 const shapeId = 'polygon-6'
 const maskId = `cs_mask_1_${shapeId}`

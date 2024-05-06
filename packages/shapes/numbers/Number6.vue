@@ -77,7 +77,7 @@
 </template>
 
 <script lang="ts" setup>
-import ShapeBase from '@/ShapeBase.vue'
+import ShapeBase from '../../ShapeBase.vue'
 
 const shapeId = 'number-6'
 const clipId = `cs_clip_1_${shapeId}`

@@ -16,7 +16,7 @@ const props = withDefaults(
 )
 
 const currentShape = computed(() => {
-  if (props.index < 1) return
+  if (props.index < 0) return
   return shapes.number[props.index]
 })
 </script>

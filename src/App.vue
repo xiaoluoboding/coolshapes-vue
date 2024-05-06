@@ -5,37 +5,41 @@
     <div class="container mx-auto max-w-5xl relative">
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
-          <!-- <Logo class="h-6 w-6" /> -->
-          <Coolshape type="moon" :index="4" :size="24" random />
+          <Coolshape :index="4" :size="24" random />
           Coolshapes Vue
         </div>
         <div class="flex-center gap-4">
-          <button
+          <!-- <button
             class="!bg-transparent opacity-50 hover:opacity-100 transition"
             @click="(e) => toggleDarkmode()"
           >
             <carbon:moon class="w-6 h-6" v-if="isDark" />
             <carbon:sun class="w-6 h-6" v-else />
-          </button>
+          </button> -->
           <a
             class="opacity-50 hover:opacity-100 transition"
-            href="https://github.com/xiaoluoboding/vue-library-starter"
+            href="https://github.com/xiaoluoboding/coolshapes-vue"
           >
             <carbon:logo-github class="h-6 w-6" />
+          </a>
+          <a
+            class="opacity-50 hover:opacity-100 transition"
+            href="https://github.com/xiaoluoboding/coolshapes-vue"
+          >
+            <carbon:logo-twitter class="h-6 w-6" />
           </a>
         </div>
       </nav>
       <header class="py-20">
-        <div class="font-extrabold">
+        <div class="font-extrabold flex-center">
           <span class="text-6xl text-neon">Coolshapes Vue</span>
-          <!-- <div class="text-6xl text-primary">Vue Component Library</div> -->
         </div>
         <div
-          class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200"
+          class="text-2xl font-semibold flex-center text-slate-700 py-4 dark:text-slate-200"
         >
           A vue component library for coolshapes with little grainy gradients.
         </div>
-        <div class="flex gap-4 mt-8">
+        <div class="flex-center gap-4 mt-8">
           <a
             class="bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold py-3 px-6 w-full sm:w-auto text-center"
             href="https://github.com/xiaoluoboding/vue-library-starter"
@@ -53,76 +57,83 @@
         </div>
       </header>
 
-      <main class="grid grid-cols-1 gap-8 text-xs 2xl:text-sm">
-        <div class="grid grid-cols-5 gap-4">
+      <main class="w-full py-8 text-xs 2xl:text-sm">
+        <div class="w-full flex-center mb-16">
+          <Seprator>
+            <section class="relative mx-auto">
+              <ToggleButton @toggle="(noise: boolean) => isNoise = !noise" />
+            </section>
+          </Seprator>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <template v-for="n in 13">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Star :index="n" />
+              <Star :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 16">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Flower :index="n" />
+              <Flower :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 12">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Ellipse :index="n" />
+              <Ellipse :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 7">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Wheel :index="n" />
+              <Wheel :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 15">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Moon :index="n" />
+              <Moon :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 11">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Misc :index="n" />
+              <Misc :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 14">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Triangle :index="n" />
+              <Triangle :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 8">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Polygon :index="n" />
+              <Polygon :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 9">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Rectangle :index="n" />
+              <Rectangle :index="n" :noise="isNoise" />
             </div>
           </template>
           <template v-for="n in 10">
             <div
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
-              <Number :index="n - 1" />
+              <Number :index="n - 1" :noise="isNoise" />
             </div>
           </template>
         </div>
@@ -183,6 +194,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import {
   Star,
   Flower,
@@ -197,6 +209,8 @@ import {
   Coolshape
 } from '@/index'
 import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
+
+const isNoise = ref(true)
 
 const demoCode0 = `# install dependencies
 > pnpm install

@@ -123,12 +123,7 @@ import Number6 from './numbers/Number6.vue'
 import Number7 from './numbers/Number7.vue'
 import Number8 from './numbers/Number8.vue'
 import Number9 from './numbers/Number9.vue'
-import { ShapeType } from '@/types'
-import {
-  ComponentInternalInstance,
-  ComponentPublicInstance,
-  DefineComponent
-} from 'vue'
+import { DefineComponent } from 'vue'
 
 const shapes = {
   star: [
