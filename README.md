@@ -1,17 +1,19 @@
-# Vue Library Starter
+[![Coolshapes](https://coolshap.es/preview.jpg)](https://coolshap.es)
+
+# <p align=center>Coolshapes</p>
 
 [![NPM][npmBadge]][npmUrl]
 [![Minzip Package][bundlePhobiaBadge]][bundlePhobiaUrl]
 [![NPM Download][npmDtBadge]][npmDtUrl]
 
-[npmBadge]: https://img.shields.io/npm/v/vue-library-starter.svg?maxAge=2592000
-[npmUrl]: https://www.npmjs.com/package/vue-library-starter
-[npmDtBadge]: https://img.shields.io/npm/dt/vue-library-starter.svg
-[npmDtUrl]: https://www.npmjs.com/package/vue-library-starter
-[bundlePhobiaBadge]: https://img.shields.io/bundlephobia/minzip/vue-library-starter
-[bundlePhobiaUrl]: https://bundlephobia.com/package/vue-library-starter@latest
+[npmBadge]: https://img.shields.io/npm/v/coolshapes-vue.svg?maxAge=2592000
+[npmUrl]: https://www.npmjs.com/package/coolshapes-vue
+[npmDtBadge]: https://img.shields.io/npm/dt/coolshapes-vue.svg
+[npmDtUrl]: https://www.npmjs.com/package/coolshapes-vue
+[bundlePhobiaBadge]: https://img.shields.io/bundlephobia/minzip/coolshapes-vue
+[bundlePhobiaUrl]: https://bundlephobia.com/package/coolshapes-vue@latest
 
-> A minimal Vue library starter, built on top of Vite & Vue 3
+A simple, fun project for the sake of creating some cool-looking abstract shapes with little grainy gradients crafted by [@realvjy](https://x.com/realvjy), ported to [Vue.js](https://vuejs.org/) by [@xiaoluoboding](https://x.com/robert_shaw_x). Coolshapes is a completely open-source set of 100+ abstract shapes crafted for any design and development projects. Free for both commercial and personal use. Licensed under MIT.
 
 ## Table of Contents
 
@@ -19,64 +21,125 @@
 
 <summary>TOC</summary>
 
-- [Vue Library Starter](#vue-library-starter)
+- [Coolshapes](#coolshapes)
   - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Use the Template](#use-the-template)
-    - [GitHub Template](#github-template)
-    - [Clone to local](#clone-to-local)
-  - [Usage](#usage)
-    - [1、Install dependencies](#1install-dependencies)
-    - [2、Build a library](#2build-a-library)
-    - [3、Publish to npm](#3publish-to-npm)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+      - [Global component example](#global-component-example)
+      - [Component with shape category example](#component-with-shape-category-example)
+      - [Generating random shapes](#generating-random-shapes)
+    - [Props](#props)
+      - [notes](#notes)
+    - [Categories](#categories)
+  - [Inspriation](#inspriation)
+  - [Contributing](#contributing)
   - [License](#license)
 
 </details>
 
-## Features
+## Installation
 
-- Package manager [pnpm](https://pnpm.js.org/), safe and fast
-- Bundle with the [library mode](https://vitejs.dev/guide/build.html#library-mode)
-- Release with [semantic-release](https://www.npmjs.com/package/semantic-release)
-- Publish to [npm](https://docs.npmjs.com/cli/v8/commands/npm-publish)
-
-## Use the Template
-
-### GitHub Template
-
-[create a repo from this template on GitHub](https://github.com/new?template_name=vue-library-starter&template_owner=xiaoluoboding)
-
-### Clone to local
-
-```bash
-git clone https://github.com/xiaoluoboding/vue-library-starter
-
-cd vue-library-starter
+```sh
+pnpm install coolshapes-vue
 ```
 
-## Usage
+or
 
-Building it is as easy as 1, 2, 3.
-
-### 1、Install dependencies
-
-```bash
-pnpm install
+```sh
+bun add coolshapes-vue
 ```
 
-### 2、Build a library
+## How to use
 
-Rename all the `vue-library-starter` to your component name in the file `package.json、vite.config.ts`, eg: `my-component`
+There are two types of components available in **Coolshapes**, which you can use: **Global component** and **Component
+for each category of shapes**. and, you can pass additional [props](#props) to adjust the shapes.
 
-```bash
-pnpm run build:lib
+#### Global component example
+
+```vue
+<template>
+  <Coolshape type="star" :index="0" :size="48" />
+</template>
+
+<script lang="ts" setup>
+import { Coolshape } from 'coolshapes-vue'
+</script>
 ```
 
-### 3、Publish to npm
+#### Component with shape category example
 
+You can import the component for specific category - `Star`,`Ellipse`... etc - and simply pass the index of the shape.
+
+```vue
+<template>
+  <Star :index="0" :size="48" />
+</template>
+
+<script lang="ts" setup>
+import { Star } from 'coolshapes-vue'
+</script>
 ```
-npm publish
+
+#### Generating random shapes
+
+setting the `random` [prop](#props) to true or leaving the `index` or `type` prop empty would replace the shape with a
+random shape every time it renders.
+
+```vue
+<template>
+  <!-- // renders a random shape from any category -->
+  <Coolshape random />
+  <!-- // renders a shape from the category star -->
+  <Coolshape type="star" random />
+</template>
+
+<script lang="ts" setup>
+import { Coolshape } from 'coolshapes-vue'
+</script>
 ```
+
+### Props
+
+| name                  | data type | default | description                                                                                                                                              |
+| --------------------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `size`                | _Number_  | 200     | The dimension of shape                                                                                                                                   |
+| [`type`](#categories) | _String_  | random  | The category of shapes, if left empty it will randomly select a category.                                                                                |
+| `noise`               | _Boolean_ | true    | Whether to add noise to the shape or not.                                                                                                                |
+| `index`               | _Number_  | random  | The index of shape within the shape [category](#categories), it would randomly select a shape from the category if type prop given. index starts from 0. |
+| `random`              | _Boolean_ | false   | If set true it will select a random component                                                                                                            |
+
+#### notes
+
+> Index starts from number 0, so if you want to retrieve the first shape of any category, you would use the index number 0.
+
+> The shapes are SVG components behind the hood, so it's also supports all the props that can be passed in a svg element.
+
+### Categories
+
+There are a total of **115** shapes available in Coolshapes under the following categories.
+
+| name        | count |
+| ----------- | ----- |
+| `star`      | 13    |
+| `triangle`  | 14    |
+| `moon`      | 15    |
+| `polygon`   | 8     |
+| `flower`    | 16    |
+| `rectangle` | 9     |
+| `ellipse`   | 12    |
+| `wheel`     | 7     |
+| `misc`      | 11    |
+| `number`    | 10    |
+
+**Note:** While passing the category name in the component, the name will be in lower case.
+
+## Inspriation
+
+[coolshapes-react](https://github.com/realvjy/coolshapes-react)
+
+## Contributing
+
+If you want to contribute, create a [pull request](https://github.com/xiaoluoboding/coolshapes-vue/pulls).
 
 ## License
 

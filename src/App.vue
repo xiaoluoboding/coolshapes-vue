@@ -1,10 +1,13 @@
 <template>
-  <div class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900">
+  <div
+    class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900 pb-16"
+  >
     <div class="container mx-auto max-w-5xl relative">
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
-          <Logo class="h-6 w-6" />
-          Vue Library Starter
+          <!-- <Logo class="h-6 w-6" /> -->
+          <Coolshape type="moon" :index="4" :size="24" random />
+          Coolshapes Vue
         </div>
         <div class="flex-center gap-4">
           <button
@@ -24,13 +27,13 @@
       </nav>
       <header class="py-20">
         <div class="font-extrabold">
-          <span class="text-6xl text-neon">Build your own</span>
-          <div class="text-6xl text-primary">Vue Component Library</div>
+          <span class="text-6xl text-neon">Coolshapes Vue</span>
+          <!-- <div class="text-6xl text-primary">Vue Component Library</div> -->
         </div>
         <div
           class="text-2xl font-semibold text-slate-700 py-4 dark:text-slate-200"
         >
-          A minimal Vue library starter, built on top of Vite & Vue 3
+          A vue component library for coolshapes with little grainy gradients.
         </div>
         <div class="flex gap-4 mt-8">
           <a
@@ -45,21 +48,88 @@
             href="https://github.com/new?template_name=vue-library-starter&template_owner=xiaoluoboding"
             target="_blank"
           >
-            <span>Use the template</span>
+            <span>Coolshap.es</span>
           </a>
         </div>
       </header>
 
       <main class="grid grid-cols-1 gap-8 text-xs 2xl:text-sm">
-        <Highlight
-          :autodetect="false"
-          language="javascript"
-          :code="demoCode0"
-        />
+        <div class="grid grid-cols-5 gap-4">
+          <template v-for="n in 13">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Star :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 16">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Flower :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 12">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Ellipse :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 7">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Wheel :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 15">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Moon :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 11">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Misc :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 14">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Triangle :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 8">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Polygon :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 9">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Rectangle :index="n" />
+            </div>
+          </template>
+          <template v-for="n in 10">
+            <div
+              class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
+            >
+              <Number :index="n - 1" />
+            </div>
+          </template>
+        </div>
       </main>
 
       <footer
-        class="mt-16 w-full flex-center text-primary"
+        class="my-16 w-full flex-center text-primary"
         text="slate-900 dark:slate-300 opacity-60 sm"
       >
         <div class="copyright flex flex-col justify-center items-center">
@@ -113,6 +183,19 @@
 </template>
 
 <script lang="ts" setup>
+import {
+  Star,
+  Flower,
+  Ellipse,
+  Wheel,
+  Moon,
+  Misc,
+  Triangle,
+  Polygon,
+  Rectangle,
+  Number,
+  Coolshape
+} from '@/index'
 import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 
 const demoCode0 = `# install dependencies

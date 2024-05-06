@@ -1,45 +1,125 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    aria-hidden="true"
-    role="img"
-    class="iconify iconify--logos"
-    width="31.88"
-    height="32"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 256 257"
+    fill="none"
+    viewBox="0 0 200 200"
+    width="400"
+    height="400"
+    class="coolshapes moon-4"
   >
+    <g clip-path="url(#cs_clip_1_moon-4)">
+      <mask
+        id="cs_mask_1_moon-4"
+        style="mask-type: alpha"
+        width="200"
+        height="200"
+        x="0"
+        y="0"
+        maskUnits="userSpaceOnUse"
+      >
+        <path
+          fill="#fff"
+          d="M27 199.999c-17.334-27.301-27-62.937-27-100C0 62.937 9.666 27.301 27 0v199.999zM200 200a100.003 100.003 0 01-100-100A100.003 100.003 0 01200 0v200zM60.29 175.485C70.51 186.396 82.715 194.701 96 200V0C82.716 5.299 70.51 13.604 60.29 24.515 41.535 44.535 31 71.687 31 100c0 28.312 10.536 55.465 29.29 75.485z"
+        ></path>
+      </mask>
+      <g mask="url(#cs_mask_1_moon-4)">
+        <path fill="#fff" d="M200 0H0v200h200V0z"></path>
+        <path
+          fill="url(#paint0_linear_748_4527)"
+          d="M200 0H0v200h200V0z"
+        ></path>
+        <g filter="url(#filter0_f_748_4527)">
+          <ellipse
+            cx="117.708"
+            cy="149.343"
+            fill="#FF58E4"
+            rx="92.722"
+            ry="73.064"
+            transform="rotate(-33.875 117.708 149.343)"
+          ></ellipse>
+          <ellipse
+            cx="68.482"
+            cy="38.587"
+            fill="#00F0FF"
+            rx="69.531"
+            ry="47.75"
+            transform="rotate(-26.262 68.482 38.587)"
+          ></ellipse>
+        </g>
+      </g>
+    </g>
     <defs>
-      <linearGradient
-        id="IconifyId1813088fe1fbc01fb466"
-        x1="-.828%"
-        x2="57.636%"
-        y1="7.652%"
-        y2="78.411%"
+      <filter
+        id="filter0_f_748_4527"
+        width="362.189"
+        height="403.182"
+        x="-77.372"
+        y="-94.144"
+        color-interpolation-filters="sRGB"
+        filterUnits="userSpaceOnUse"
       >
-        <stop offset="0%" stop-color="#41D1FF"></stop>
-        <stop offset="100%" stop-color="#BD34FE"></stop>
-      </linearGradient>
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        ></feBlend>
+        <feGaussianBlur
+          result="effect1_foregroundBlur_748_4527"
+          stdDeviation="40"
+        ></feGaussianBlur>
+      </filter>
       <linearGradient
-        id="IconifyId1813088fe1fbc01fb467"
-        x1="43.376%"
-        x2="50.316%"
-        y1="2.242%"
-        y2="89.03%"
+        id="paint0_linear_748_4527"
+        x1="158.5"
+        x2="29"
+        y1="12.5"
+        y2="200"
+        gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0%" stop-color="#FFEA83"></stop>
-        <stop offset="8.333%" stop-color="#FFDD35"></stop>
-        <stop offset="100%" stop-color="#FFA800"></stop>
+        <stop stop-color="#0E6FFF"></stop>
+        <stop offset="1" stop-color="#00F0FF"></stop>
       </linearGradient>
+      <clipPath id="cs_clip_1_moon-4">
+        <path fill="#fff" d="M0 0H200V200H0z"></path>
+      </clipPath>
     </defs>
-    <path
-      fill="url(#IconifyId1813088fe1fbc01fb466)"
-      d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"
-    ></path>
-    <path
-      fill="url(#IconifyId1813088fe1fbc01fb467)"
-      d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"
-    ></path>
+    <g style="mix-blend-mode: overlay" mask="url(#cs_mask_1_moon-4)">
+      <path
+        fill="gray"
+        stroke="transparent"
+        d="M200 0H0v200h200V0z"
+        filter="url(#cs_noise_1_moon-4)"
+      ></path>
+    </g>
+    <defs>
+      <filter
+        id="cs_noise_1_moon-4"
+        width="100%"
+        height="100%"
+        x="0%"
+        y="0%"
+        filterUnits="objectBoundingBox"
+      >
+        <feTurbulence
+          baseFrequency="0.6"
+          numOctaves="5"
+          result="out1"
+          seed="4"
+        ></feTurbulence>
+        <feComposite
+          in="out1"
+          in2="SourceGraphic"
+          operator="in"
+          result="out2"
+        ></feComposite>
+        <feBlend
+          in="SourceGraphic"
+          in2="out2"
+          mode="overlay"
+          result="out3"
+        ></feBlend>
+      </filter>
+    </defs>
   </svg>
 </template>

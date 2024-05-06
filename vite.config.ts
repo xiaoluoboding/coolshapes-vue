@@ -35,8 +35,8 @@ export default defineConfig(({ command, mode }) => {
     userConfig.build = {
       lib: {
         entry: resolve(__dirname, 'packages/index.ts'),
-        name: 'VueLibraryStarter',
-        fileName: 'vue-library-starter'
+        name: 'CoolshapesVue',
+        fileName: 'coolshapes-vue'
       },
       outDir: 'lib',
       emptyOutDir: true,
@@ -47,11 +47,11 @@ export default defineConfig(({ command, mode }) => {
         output: [
           {
             format: 'cjs',
-            entryFileNames: `vue-library-starter.cjs`
+            entryFileNames: `coolshapes-vue.cjs`
           },
           {
             format: 'es',
-            entryFileNames: `vue-library-starter.js`,
+            entryFileNames: `coolshapes-vue.js`,
             preserveModules: false
           }
         ]
@@ -62,7 +62,8 @@ export default defineConfig(({ command, mode }) => {
       {
         name: 'inline-css',
         transform(code, id) {
-          const isCSS = (path: string) => /\.(?:css|scss|sass|postcss)$/.test(path)
+          const isCSS = (path: string) =>
+            /\.(?:css|scss|sass|postcss)$/.test(path)
           if (!isCSS(id)) return
 
           const cssCode = minify(code)
