@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@unhead/vue':
+        specifier: ^1.9.10
+        version: 1.9.10(vue@3.4.26(typescript@4.9.5))
+      unhead:
+        specifier: ^1.9.10
+        version: 1.9.10
     devDependencies:
       '@iconify/json':
         specifier: ^2.2.207
@@ -274,6 +281,20 @@ packages:
 
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
+
+  '@unhead/dom@1.9.10':
+    resolution: {integrity: sha512-F4sBrmd8kG8MEqcVTGL0Y6tXbJMdWK724pznUzefpZTs1GaVypFikLluaLt4EnICcVhOBSe4TkGrc8N21IJJzQ==}
+
+  '@unhead/schema@1.9.10':
+    resolution: {integrity: sha512-3ROh0doKfA7cIcU0zmjYVvNOiJuxSOcjInL+7iOFIxQovEWr1PcDnrnbEWGJsXrLA8eqjrjmhuDqAr3JbMGsLg==}
+
+  '@unhead/shared@1.9.10':
+    resolution: {integrity: sha512-LBXxm/8ahY4FZ0FbWVaM1ANFO5QpPzvaYwjAQhgHANsrqFP2EqoGcOv1CfhdQbxg8vpGXkjI7m0r/8E9d3JoDA==}
+
+  '@unhead/vue@1.9.10':
+    resolution: {integrity: sha512-Zi65eTU5IIaqqXAVOVJ4fnwJRR751FZIFlzYOjIekf1eNkISy+A4xyz3NIEQWSlXCrOiDNgDhT0YgKUcx5FfHQ==}
+    peerDependencies:
+      vue: '>=2.7 || >=3'
 
   '@unocss/astro@0.55.7':
     resolution: {integrity: sha512-mw8r14ArxUQBVCCisAJlF/WsZb650iBsduD/lXMk56N/nQ3MMArCcn62kcAxgZSb5tfIOQGQu/tbR8hEcD8y2g==}
@@ -562,6 +583,9 @@ packages:
     resolution: {integrity: sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==}
     engines: {node: '>=12.0.0'}
 
+  hookable@5.5.3:
+    resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
+
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
@@ -811,6 +835,9 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
+  unhead@1.9.10:
+    resolution: {integrity: sha512-Y3w+j1x1YFig2YuE+W2sER+SciRR7MQktYRHNqvZJ0iUNCCJTS8Z/SdSMUEeuFV28daXeASlR3fy7Ry3O2indg==}
+
   unocss@0.55.7:
     resolution: {integrity: sha512-3W9P7vj2EhSk/4oPCHBS0VgrwSf5zZL6Az1/XARVOpBnRJtCM2szFInYxHkMgt9pkZTsW8SFCuk/g+QIJ6A8tg==}
     engines: {node: '>=14'}
@@ -934,6 +961,9 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  zhead@2.2.4:
+    resolution: {integrity: sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==}
 
 snapshots:
 
@@ -1094,6 +1124,28 @@ snapshots:
       undici-types: 5.26.5
 
   '@types/web-bluetooth@0.0.20': {}
+
+  '@unhead/dom@1.9.10':
+    dependencies:
+      '@unhead/schema': 1.9.10
+      '@unhead/shared': 1.9.10
+
+  '@unhead/schema@1.9.10':
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+
+  '@unhead/shared@1.9.10':
+    dependencies:
+      '@unhead/schema': 1.9.10
+
+  '@unhead/vue@1.9.10(vue@3.4.26(typescript@4.9.5))':
+    dependencies:
+      '@unhead/schema': 1.9.10
+      '@unhead/shared': 1.9.10
+      hookable: 5.5.3
+      unhead: 1.9.10
+      vue: 3.4.26(typescript@4.9.5)
 
   '@unocss/astro@0.55.7(rollup@3.29.4)(vite@4.5.3(@types/node@18.19.31)(sass@1.76.0))':
     dependencies:
@@ -1490,6 +1542,8 @@ snapshots:
 
   highlight.js@11.9.0: {}
 
+  hookable@5.5.3: {}
+
   human-signals@2.1.0: {}
 
   immutable@4.3.5: {}
@@ -1697,6 +1751,13 @@ snapshots:
 
   undici-types@5.26.5: {}
 
+  unhead@1.9.10:
+    dependencies:
+      '@unhead/dom': 1.9.10
+      '@unhead/schema': 1.9.10
+      '@unhead/shared': 1.9.10
+      hookable: 5.5.3
+
   unocss@0.55.7(postcss@8.4.38)(rollup@3.29.4)(vite@4.5.3(@types/node@18.19.31)(sass@1.76.0)):
     dependencies:
       '@unocss/astro': 0.55.7(rollup@3.29.4)(vite@4.5.3(@types/node@18.19.31)(sass@1.76.0))
@@ -1814,3 +1875,5 @@ snapshots:
   yallist@4.0.0: {}
 
   yocto-queue@0.1.0: {}
+
+  zhead@2.2.4: {}
