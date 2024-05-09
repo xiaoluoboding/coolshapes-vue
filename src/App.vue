@@ -211,7 +211,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useSeoMeta } from '@unhead/vue'
+// import { useSeoMeta } from '@unhead/vue'
 
 import {
   Star,
@@ -228,20 +228,20 @@ import {
 } from '@/index'
 import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 
-useSeoMeta({
-  ogTitle: 'Coolshapes Vue',
-  title: 'Coolshapes Vue',
-  twitterTitle: 'Coolshapes Vue',
-  description:
-    '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
-  ogDescription:
-    '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
-  twitterDescription:
-    '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
-  ogImage: 'https://coolshapes-vue.vercel.app/preview.jpg',
-  twitterImage: 'https://coolshapes-vue.vercel.app/preview.jpg',
-  ogLocale: 'en'
-})
+// useSeoMeta({
+//   ogTitle: 'Coolshapes Vue',
+//   title: 'Coolshapes Vue',
+//   twitterTitle: 'Coolshapes Vue',
+//   description:
+//     '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
+//   ogDescription:
+//     '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
+//   twitterDescription:
+//     '100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.',
+//   ogImage: 'https://coolshapes-vue.vercel.app/preview.jpg',
+//   twitterImage: 'https://coolshapes-vue.vercel.app/preview.jpg',
+//   ogLocale: 'en'
+// })
 
 const isNoise = ref(true)
 
