@@ -50,10 +50,12 @@ const slots = useSlots()
 
 const props = withDefaults(
   defineProps<{
+    type: string
     noise: boolean
     index: number
   }>(),
   {
+    type: 'star',
     noise: false,
     index: 1
   }
@@ -61,7 +63,6 @@ const props = withDefaults(
 
 const infoText = ref('')
 const isCopy = ref(false)
-// const shapeType = 'svg'
 const svgName = ref('')
 const svg = ref<string>('')
 const imgRef = ref<HTMLImageElement | null>(null)

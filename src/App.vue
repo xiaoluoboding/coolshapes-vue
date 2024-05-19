@@ -86,6 +86,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="star"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Star :index="n" :noise="isNoise" />
@@ -95,6 +96,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="flower"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Flower :index="n" :noise="isNoise" />
@@ -104,6 +106,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="ellipse"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Ellipse :index="n" :noise="isNoise" />
@@ -113,6 +116,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="wheel"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Wheel :index="n" :noise="isNoise" />
@@ -122,6 +126,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="moon"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Moon :index="n" :noise="isNoise" />
@@ -131,6 +136,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="misc"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Misc :index="n" :noise="isNoise" />
@@ -140,6 +146,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="triangle"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Triangle :index="n" :noise="isNoise" />
@@ -149,6 +156,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="polygon"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Polygon :index="n" :noise="isNoise" />
@@ -158,6 +166,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="rectangle"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Rectangle :index="n" :noise="isNoise" />
@@ -167,6 +176,7 @@
             <ShapeGrid
               :index="n"
               :noise="isNoise"
+              type="number"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Number :index="n - 1" :noise="isNoise" />
