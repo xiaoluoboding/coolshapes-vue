@@ -20,18 +20,20 @@ import Triangle from './shapes/Triangle.vue'
 import Wheel from './shapes/Wheel.vue'
 
 interface ShapeOptions extends /* @vue-ignore */ ShapeProps {
-  type: shapeTypes
-  index: number
+  type?: shapeTypes
+  index?: number
   random?: boolean
 }
 
-const props = withDefaults(defineProps<ShapeOptions>(), {
-  type: 'star',
-  index: 1,
-  random: false,
-  size: 128,
-  noise: false
-})
+const props = defineProps<ShapeOptions>()
+
+const {
+  type = 'star',
+  index = 1,
+  random = false,
+  size = 128,
+  noise = false
+} = props
 
 const shapes = {
   ellipse: Ellipse,
@@ -47,11 +49,11 @@ const shapes = {
 }
 
 const shape = computed(() => {
-  if (props.random) {
+  if (random) {
     return getRandomShape({
-      type: props.type
+      type
     })
   }
-  return shapes[props.type]
+  return shapes[type]
 })
 </script>

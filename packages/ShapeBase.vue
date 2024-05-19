@@ -19,7 +19,7 @@
         <path fill="#fff" d="M0 0H200V200H0z"></path>
       </clipPath>
     </defs>
-    <NoiseMask :showNoise="noise" :id="iconName" v-if="noise" />
+    <NoiseMask :id="shapeName" v-if="noise" />
   </svg>
 </template>
 
@@ -35,7 +35,6 @@ const props = withDefaults(
     defaultWidth?: number
     defaultHeight?: number
     defaultClassName?: string
-    iconName: string
     className?: string
     size?: number
     noise?: boolean
@@ -49,7 +48,6 @@ const props = withDefaults(
     defaultHeight: 200,
     defaultClassName: 'coolshapes-vue',
     className: '',
-    iconName: '',
     size: 128,
     noise: true,
     shapeName: 'star-1'
@@ -57,7 +55,7 @@ const props = withDefaults(
 )
 
 const svgClass = computed(() => {
-  return `${props.defaultClassName} ${props.iconName} ${props.className || ''}`
+  return `${props.defaultClassName} ${props.shapeName} ${props.className || ''}`
 })
 
 const clipId = `cs_clip_1_${props.shapeName}`

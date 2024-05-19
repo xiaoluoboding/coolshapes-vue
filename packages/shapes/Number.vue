@@ -1,6 +1,4 @@
-<template>
-  <component :is="currentShape" :iconName="`number-${props.index}`" />
-</template>
+<template><component :is="currentShape" /></template>
 
 <script lang="ts" setup>
 import { computed, withDefaults } from 'vue'

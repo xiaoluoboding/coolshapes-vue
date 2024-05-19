@@ -1,5 +1,5 @@
 <template>
-  <component :is="currentShape" :iconName="`moon-${props.index}`" />
+  <component :is="currentShape" />
 </template>
 
 <script lang="ts" setup>

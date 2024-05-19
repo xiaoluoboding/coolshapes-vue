@@ -1,5 +1,5 @@
 <template>
-  <component :is="currentShape" :iconName="`triangle-${props.index}`" />
+  <component :is="currentShape" />
 </template>
 
 <script lang="ts" setup>

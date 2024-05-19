@@ -1,5 +1,5 @@
 <template>
-  <component :is="currentShape" :iconName="`ellipse-${props.index}`" />
+  <component :is="currentShape" />
 </template>
 
 <script lang="ts" setup>
