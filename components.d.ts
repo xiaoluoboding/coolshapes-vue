@@ -12,10 +12,13 @@ declare module 'vue' {
     'Carbon:logoTwitter': typeof import('~icons/carbon/logo-twitter')['default']
     'Carbon:moon': typeof import('~icons/carbon/moon')['default']
     'Carbon:sun': typeof import('~icons/carbon/sun')['default']
+    CopyIcon: typeof import('./src/components/icons/CopyIcon.vue')['default']
+    DownloadIcon: typeof import('./src/components/icons/DownloadIcon.vue')['default']
     LinkButton: typeof import('./src/components/LinkButton.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     'Mdi:heart': typeof import('~icons/mdi/heart')['default']
     Seprator: typeof import('./src/components/Seprator.vue')['default']
+    ShapeGrid: typeof import('./src/components/ShapeGrid.vue')['default']
     ToggleButton: typeof import('./src/components/ToggleButton.vue')['default']
   }
 }

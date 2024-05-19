@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@unhead/vue": "^1.9.10",
+    "copy-to-clipboard": "^3.3.3",
     "unhead": "^1.9.10"
   }
 }

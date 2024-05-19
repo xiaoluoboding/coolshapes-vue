@@ -2,7 +2,7 @@
   <div
     class="w-full h-full min-h-screen bg-neutral-50 dark:bg-neutral-900 pb-16 px-8 lg:px-16"
   >
-    <div class="container mx-auto max-w-5xl relative">
+    <div class="container mx-auto max-w-screen-xl relative">
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
           <Logo class="w-8 h-8" />
@@ -23,7 +23,7 @@
           </a>
           <a
             class="opacity-50 hover:opacity-100 transition"
-            href="https://github.com/xiaoluoboding/coolshapes-vue"
+            href="https://x.com/robert_shaw_x/status/1788060005620728002"
           >
             <carbon:logo-twitter class="h-6 w-6" />
           </a>
@@ -59,21 +59,21 @@
             href="https://github.com/xiaoluoboding/coolshapes-vue"
             target="_blank"
           >
-            <Coolshape :size="20" random />
+            <Coolshape :size="20" :random="true" />
             <span>Documentation</span>
           </LinkButton>
           <LinkButton href="https://coolshap.es/" target="_blank">
-            <Coolshape :size="20" random />
+            <Coolshape :size="20" :random="true" />
             <span>Coolshap.es</span>
           </LinkButton>
           <LinkButton href="https://demo.coolshap.es/" target="_blank">
-            <Coolshape :size="20" random />
+            <Coolshape :size="20" :random="true" />
             <span>Try Demo</span>
           </LinkButton>
         </div>
       </header>
 
-      <main class="w-full py-8 text-xs 2xl:text-sm">
+      <main class="w-full pb-8 text-xs 2xl:text-sm">
         <div class="w-full flex-center mb-16">
           <Seprator>
             <section class="relative mx-auto">
@@ -83,74 +83,94 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <template v-for="n in 13">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Star :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 16">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Flower :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 12">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Ellipse :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 7">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Wheel :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 15">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Moon :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 11">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Misc :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 14">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Triangle :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 8">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Polygon :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 9">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Rectangle :index="n" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
           <template v-for="n in 10">
-            <div
+            <ShapeGrid
+              :index="n"
+              :noise="isNoise"
               class="rounded-3xl border dark:border-white/5 flex-center aspect-square"
             >
               <Number :index="n - 1" :noise="isNoise" />
-            </div>
+            </ShapeGrid>
           </template>
         </div>
       </main>
@@ -227,6 +247,7 @@ import {
   Coolshape
 } from '@/index'
 import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
+import ShapeGrid from '~/components/ShapeGrid.vue'
 
 // useSeoMeta({
 //   ogTitle: 'Coolshapes Vue',
@@ -246,22 +267,6 @@ import { isDark, toggleDarkmode } from '~/composables/useDarkmode'
 const isNoise = ref(true)
 
 toggleDarkmode(true)
-
-const demoCode0 = `# install dependencies
-> pnpm install
-
-# start the doc app with HMR
-> pnpm run dev
-
-# build the doc app, available under /dist
-> pnpm run build:docs
-
-# build the library, available under /lib
-> pnpm run build:lib
-
-# create the changelog
-> pnpm run changelog
-`
 </script>
 
 <style lang="scss">
