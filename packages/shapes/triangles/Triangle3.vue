@@ -60,6 +60,6 @@
 <script lang="ts" setup>
 import ShapeBase from '../../ShapeBase.vue'
 
-const shapeId = 'triangle-8'
+const shapeId = 'triangle-3'
 const maskId = `cs_mask_1_${shapeId}`
 </script>
