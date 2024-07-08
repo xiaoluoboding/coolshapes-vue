@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/xiaoluoboding/coolshapes-vue/compare/v0.1.1...v0.1.2) (2024-07-08)
+
+
+### Bug Fixes
+
+* fixed the disordered shape id ([8dc3fb0](https://github.com/xiaoluoboding/coolshapes-vue/commit/8dc3fb08b6e9f19b7fe067b804f2e9fc15c86c67))
+
+
+
 ## [0.1.1](https://github.com/xiaoluoboding/coolshapes-vue/compare/v0.1.0...v0.1.1) (2024-05-19)
 
 

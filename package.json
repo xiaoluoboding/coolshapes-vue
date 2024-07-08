@@ -1,7 +1,7 @@
 {
   "name": "coolshapes-vue",
   "description": "A vue component library for coolshapes with little grainy gradients.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "author": "xiaoluoboding <xiaoluoboding@gmail.com>",
   "scripts": {
